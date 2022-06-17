@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "WavyBirds", "WavyBirds\WavyBirds.pyproj", "{C1B78018-78BB-4E51-96DA-A90BE4D467CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1B78018-78BB-4E51-96DA-A90BE4D467CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1B78018-78BB-4E51-96DA-A90BE4D467CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6898C6E-5210-4669-9BE5-9305D1AEAB07}
+	EndGlobalSection
+EndGlobal
