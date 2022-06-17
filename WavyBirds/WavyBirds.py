@@ -11,7 +11,7 @@ def game() :
     background = 75, 75, 250
     size = width, height = 700, 500
     screen = pygame.display.set_mode(size)
-    gravity = .4
+    gravity = 20
     pipegapsize = 125
 
     birdrect = pygame.Rect(width/2-20, 0, 40, 40)
@@ -42,12 +42,12 @@ def game() :
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_SPACE:
                     didbirdmove = True
-                    birdspeed = -.2
+                    birdspeed = -400
         if didbirdmove == False:
-            birdspeed += gravity * deltatime.total_seconds()
+            birdspeed += gravity
             
         location += speed * deltatime.total_seconds()
-        birdlocation += birdspeed
+        birdlocation += birdspeed * deltatime.total_seconds()
 
         toppipe = toppipe.move((width - location) - toppipe.left, 0)
         bottompipe = bottompipe.move((width - location) - bottompipe.left, 0)
@@ -55,17 +55,18 @@ def game() :
 
         if location > width + toppipe.w:
             location = 0
-
             bottompipe.h = random.randint(10, height - pipegapsize + 10)
             bottompipe.bottom = height
-            toppipe.bottom = bottompipe.top - pipegapsize
+            toppipe.bottom = bottompipe.top - pipegapsize 
 
 
 
         #renderen
-        screen.fill(background)
-        pygame.draw.rect(screen, (0, 100, 50), birdrect)
-        pygame.draw.rect(screen, (100, 100, 50), toppipe)
+        bg = pygame.image.load("strand.png")
+        screen.blit(bg, (0, 0))
+        #screen.fill(background);
+        pygame.draw.rect(screen, (100, 100, 100), birdrect)
+        pygame.draw.rect(screen, (255, 100, 50), toppipe)
         pygame.draw.rect(screen, (255, 100, 50), bottompipe)
         speed += deltatime.microseconds/100000
         pygame.display.flip()
