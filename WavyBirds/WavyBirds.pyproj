@@ -24,7 +24,6 @@
     <Compile Include="WavyBirds.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="pijp.png" />
     <Content Include="vogel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
