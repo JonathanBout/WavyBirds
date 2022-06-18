@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c1b78018-78bb-4e51-96da-a90be4d467cc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>WavyBirds.py</StartupFile>
+    <StartupFile>WavyBirds.pyw</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="WavyBirds.py" />
+    <Compile Include="WavyBirds.pyw" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bird_frame 0.gif" />

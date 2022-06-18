@@ -18,10 +18,28 @@ def gameover():
     screen.blit(text, textRect)
     pygame.display.flip()
     pygame.time.wait(2000)
-    menu()  
+    menu()
 
 def menu():
-    game()
+    screenCenterX = width/2
+    screenCenterY = height/2
+    screen.blit(beachimg, (0, 0))
+    buttonRect = pygame.draw.circle(screen, (20, 200, 20), (screenCenterX, screenCenterY), 40)
+    pygame.draw.polygon(screen, (200, 20, 20), [( screenCenterX + 30, screenCenterY), ( screenCenterX - 18, screenCenterY +  28), ( screenCenterX -  18, screenCenterY -  28)])
+    text = font.render("Flappy Seagull", True, (0, 0, 0))
+    textRect = text.get_rect()
+    textRect.center = (width/2, height/2 - 200)
+    screen.blit(text, textRect)
+    pygame.display.flip()
+    clicked = False
+    while not clicked:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT: sys.exit()
+            if event.type == pygame.MOUSEBUTTONUP:
+                if event.button == pygame.BUTTON_LEFT:
+                    if buttonRect.collidepoint(event.pos):
+                        clicked = True
+    game()  
 
 def game():
     gravity = 20
@@ -66,14 +84,11 @@ def game():
 
 
         flaptimeDist = -(prevFlapTime - datetime.now()).total_seconds()
-        print (flaptimeDist)
         if flaptimeDist >= 1:
-            print ("flap 1")
             currentImg = birdImg0
             birdRect = currentImg.get_bounding_rect()
             prevFlapTime = datetime.now()
         elif flaptimeDist >= 0.5:
-            print ("flap 0")
             currentImg = birdImg1
             birdRect = currentImg.get_bounding_rect()
 
