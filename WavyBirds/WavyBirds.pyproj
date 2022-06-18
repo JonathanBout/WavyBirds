@@ -24,8 +24,11 @@
     <Compile Include="WavyBirds.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bird_frame 0.gif" />
+    <Content Include="bird_frame 1.gif" />
+    <Content Include="font.ttf" />
+    <Content Include="paal.png" />
     <Content Include="strand.png" />
-    <Content Include="vogel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
