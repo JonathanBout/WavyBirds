@@ -569,3 +569,6 @@ FodyWeavers.xsd
 *.vsidx
 *.vsidx
 .vs/WavyBirds/v17/.suo
+*.bak
+*.dat
+*.dir
