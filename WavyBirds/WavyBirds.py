@@ -5,16 +5,9 @@ import pygame
 import shelve
 from datetime import datetime, timedelta
 
-pygame.init()
-beachimg = pygame.image.load("strand.png")
-size = width, height = 700, 500
-screen = pygame.display.set_mode(size)
-pygame.display.set_caption("Flappy Seagull")
-font = pygame.font.Font('font.ttf', 32)
-
 def gameover(score):
     WriteScore(score)
-    font = pygame.font.Font('font.ttf', 32)
+    font = pygame.font.Font('font.ttf', 40)
     text = font.render("Game Over!", True, (0, 0, 0))
     textRect = text.get_rect()
     textRect.center = (width/2, height/2 - 60)
@@ -72,11 +65,12 @@ def menu():
     screenCenterX = width/2
     screenCenterY = height/2
     screen.blit(beachimg, (0, 0))
+    font = pygame.font.Font('font.ttf', 50)
     buttonRect = pygame.draw.circle(screen, (200, 20, 20), (screenCenterX, screenCenterY), 40)
     pygame.draw.polygon(screen, (20, 150, 200), [( screenCenterX + 30, screenCenterY), ( screenCenterX - 18, screenCenterY +  28), ( screenCenterX -  18, screenCenterY -  28)])
-    text = font.render("Flappy Seagull", True, (0, 0, 0))
+    text = font.render("Wavy Seagulls", True, (0, 0, 0))
     textRect = text.get_rect()
-    textRect.center = (width/2, height/2 - 200)
+    textRect.center = (width/2, height/2 - 100)
     screen.blit(text, textRect)
     pygame.display.flip()
     clicked = False
@@ -99,6 +93,7 @@ def game():
     currentImg = birdImg0
     birdRect = currentImg.get_bounding_rect()
     clock = pygame.time.Clock()
+    font = pygame.font.Font('font.ttf', 32)
 
     birdRect.center = (width/2, height/3)
     birdRect.top = 0
@@ -207,9 +202,20 @@ def game():
 def updatepositions(birds, firstpos):
     for i in range(0, len(birds)):
         bird = birds[i]
-        bird.center = (width/2 - (i * bird.w + 25), firstpos)
+        if (i == 0):
+            bird.center = (width/2 - (i * bird.w + 25), firstpos)
+        else:
+            ypos = bird.center[1]
+            bird.center = (width/2 - (i * bird.w + 25), ypos + ((birds[i - 1].center[1] - ypos)/4))
         birds[i] = bird
     return birds
+
+pygame.init()
+beachimg = pygame.image.load("strand.png")
+size = width, height = 700, 500
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Wavy Seagulls")
+
 menu()
 
 
