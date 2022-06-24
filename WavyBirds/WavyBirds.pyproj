@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c1b78018-78bb-4e51-96da-a90be4d467cc</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>WavyBirds.py</StartupFile>
+    <StartupFile>Code\WavyBirds.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,14 +21,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="WavyBirds.py" />
+    <Compile Include="Code\WavyBirds.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bird_frame 0.gif" />
-    <Content Include="bird_frame 1.gif" />
-    <Content Include="font.ttf" />
-    <Content Include="paal.png" />
-    <Content Include="strand.png" />
+    <Content Include="Images\bird_frame 0.gif" />
+    <Content Include="Images\bird_frame 1.gif" />
+    <Content Include="Images\font.ttf" />
+    <Content Include="Images\paal.png" />
+    <Content Include="Images\strand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Code\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

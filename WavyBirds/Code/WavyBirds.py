@@ -7,14 +7,14 @@ from datetime import datetime, timedelta
 
 def gameover(score):
     WriteScore(score)
-    font = pygame.font.Font('font.ttf', 40)
+    font = pygame.font.Font('Images/font.ttf', 40)
     text = font.render("Game Over!", True, (0, 0, 0))
     textRect = text.get_rect()
     textRect.center = (width/2, height/2 - 60)
     screen.blit(text, textRect)
     rectbottom = textRect.bottom
 
-    font = pygame.font.Font('font.ttf', 20)
+    font = pygame.font.Font('Images/font.ttf', 20)
     text = font.render("[ESC]: Home", True, (255, 255, 255))
     textRect = text.get_rect()
     textRect.center = (width/2, 0)
@@ -65,7 +65,7 @@ def menu():
     screenCenterX = width/2
     screenCenterY = height/2
     screen.blit(beachimg, (0, 0))
-    font = pygame.font.Font('font.ttf', 50)
+    font = pygame.font.Font('Images/font.ttf', 50)
     buttonRect = pygame.draw.circle(screen, (200, 20, 20), (screenCenterX, screenCenterY), 40)
     pygame.draw.polygon(screen, (20, 150, 200), [( screenCenterX + 30, screenCenterY), ( screenCenterX - 18, screenCenterY +  28), ( screenCenterX -  18, screenCenterY -  28)])
     text = font.render("Wavy Seagulls", True, (0, 0, 0))
@@ -88,12 +88,12 @@ def game():
     highscore = ReadScore()
     gravity = 25
     pipegapsize = 200
-    birdImg0 = pygame.transform.scale(pygame.image.load("bird_frame 0.gif"), (114, 63))
-    birdImg1 = pygame.transform.scale(pygame.image.load("bird_frame 1.gif"), (114, 63))
+    birdImg0 = pygame.transform.scale(pygame.image.load("Images/bird_frame 0.gif"), (114, 63))
+    birdImg1 = pygame.transform.scale(pygame.image.load("Images/bird_frame 1.gif"), (114, 63))
     currentImg = birdImg0
     birdRect = currentImg.get_bounding_rect()
     clock = pygame.time.Clock()
-    font = pygame.font.Font('font.ttf', 32)
+    font = pygame.font.Font('Images/font.ttf', 32)
 
     birdRect.center = (width/2, height/3)
     birdRect.top = 0
@@ -104,8 +104,8 @@ def game():
     location = 0
     birdlocation = 0
     birdspeed = 0
-    toppipeimg = pygame.image.load("paal.png")
-    bottompipeimg = pygame.image.load("paal.png")
+    toppipeimg = pygame.image.load("Images/paal.png")
+    bottompipeimg = pygame.image.load("Images/paal.png")
     bottompipe = bottompipeimg.get_bounding_rect(1)
     toppipe = toppipeimg.get_rect()
     bottompipe.top = random.randint(pipegapsize + 10, height - 10)
@@ -211,7 +211,7 @@ def updatepositions(birds, firstpos):
     return birds
 
 pygame.init()
-beachimg = pygame.image.load("strand.png")
+beachimg = pygame.image.load("Images/strand.png")
 size = width, height = 700, 500
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Wavy Seagulls")
