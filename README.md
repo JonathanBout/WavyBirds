@@ -6,4 +6,4 @@
 - Flappy Bird-ish game.
 - Every bird is a 'live'. If you hit a bar you lose one bird, but if you hit the ground you lose all.
 - Play!
- btw there is one ~bug~ feature that allows you to go on forever :)
+ <br><br>oh and btw there is one ~bug~ feature that allows you to go on forever :)
