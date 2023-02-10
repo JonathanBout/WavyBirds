@@ -1,6 +1,7 @@
 # WavyBirds
 - Made with Python.NET, although it should be able to run without .NET.
 - Textures made with [pixilart](www.pixilart.com).
+- Code can be found in the [WavyBirds/Code](https://github.com/JonathanBout/WavyBirds/WavyBirds/Code) folder, textures in the [WavyBirds/Images](https://github.com/JonathanBout/WavyBirds/WavyBirds/Images) folder.
 
 ## How the game works
 - Flappy Bird-ish game.
