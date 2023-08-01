@@ -4,6 +4,6 @@
 
 ## How the game works
 - Flappy Bird-ish game.
-- Every bird is a 'live'. If you hit a bar you lose one bird, but if you hit the ground you lose all.
+- Every bird is a 'life'. If you hit a bar you lose one bird, but if you hit the ground you lose all.
 - Play!
  <br><br>oh and btw there is one ~bug~ feature that allows you to go on forever :)
