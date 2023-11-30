@@ -210,13 +210,14 @@ def updatepositions(birds, firstpos):
         birds[i] = bird
     return birds
 
-pygame.init()
-beachimg = pygame.image.load("../Images/strand.png")
-size = width, height = 700, 500
-screen = pygame.display.set_mode(size)
-pygame.display.set_caption("Wavy Birds")
-
-menu()
+if __name__ == '__main__'":
+    pygame.init()
+    beachimg = pygame.image.load("../Images/strand.png")
+    size = width, height = 700, 500
+    screen = pygame.display.set_mode(size)
+    pygame.display.set_caption("Wavy Birds")
+    
+    menu()
 
 
 
